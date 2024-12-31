@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #3d3d3d;
+  color: #C9D1D9;
+  font-family: "Manrope", serif;
+  font-size: 1.6rem;
+}
+body .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-heading h3 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.search-form-container {
+  margin: 1.6rem 0rem;
+  width: 50%;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  display: flex;
+}
+.search-form-container #searchInput {
+  width: 70%;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 1.6rem 0rem;
+  border: #6E7681 solid 1px;
+  background: transparent;
+  color: #C9D1D9;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  padding-left: 1rem;
+}
+.search-form-container .searchBtn {
+  width: 30%;
+  font-size: 1.6rem;
+  border: none;
+  padding: 1.6rem;
+  border: #6E7681 solid 1px;
+  background: transparent;
+  color: #C9D1D9;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-left: transparent;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+.search-form-container .searchBtn:hover {
+  background: #3d3d3d;
+}
+.search-form-container .searchBtn:active {
+  transform: scale(0.98);
+}
+
+.github-profile-card {
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  border: #6E7681 solid 1px;
+  border-radius: 0.5rem;
+  padding: 1.6rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.github-profile-card .profile-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: #6E7681 solid 1px;
+  overflow: hidden;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
+}
+.github-profile-card .profile-image-container img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.github-profile-card .border-line {
+  width: 100%;
+  background: #6E7681;
+  color: #6E7681;
+  border: #6E7681 solid 1px;
+  margin: 0.5rem 0rem;
+}
+.github-profile-card .profile-card-text {
+  text-align: center;
+}
+.github-profile-card .profile-card-text .info-heading h3 {
+  font-size: 2rem;
+}
+.github-profile-card .profile-card-text .info-heading p {
+  margin: 0.5rem 0rem;
+}
+.github-profile-card .profile-card-text .follow-info {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  gap: 1.6rem;
+}
+.github-profile-card .profile-card-text .follow-info .single span {
+  color: #A78BFA;
+  font-weight: 900;
+}
+.github-profile-card .profile-card-text .visit-link {
+  text-decoration: none;
+  color: #A78BFA;
+  position: relative;
+}
+.github-profile-card .profile-card-text .visit-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #A78BFA;
+  transition: width 0.2s ease-in-out;
+}
+.github-profile-card .profile-card-text .visit-link:hover::after {
+  width: 100%;
+}
+
+.repos {
+  width: 80%;
+  min-height: 20vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.6rem;
+}
+.repos .repo-card {
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 0rem;
+  border: #6E7681 solid 1px;
+  border-radius: 0.5rem;
+  margin: 1.6rem 0rem;
+  width: 100%;
+}
+.repos .repo-card .min-heading {
+  padding: 1.6rem 0rem;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+}
+.repos .repo-card .repo-link .repo-btn {
+  border: #6E7681 solid 1px;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #A78BFA;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+.repos .repo-card .repo-link .repo-btn i {
+  font-size: 2rem;
+}/*# sourceMappingURL=styles.css.map */

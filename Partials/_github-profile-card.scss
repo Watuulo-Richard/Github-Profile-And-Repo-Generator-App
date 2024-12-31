@@ -1,0 +1,98 @@
+.github-profile-card {
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+    border: $Border-Highlight solid 1px;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .profile-image-container {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: $Border-Highlight solid 1px;
+        overflow: hidden;
+        box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+        & img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+    }
+    .border-line {
+        width: 100%;
+        background: $Border-Highlight;
+        color: $Border-Highlight;
+        border: $Border-Highlight solid 1px;
+        margin: .5rem 0rem;
+    }
+    .profile-card-text {
+        text-align: center;
+        .info-heading {
+           & h3 {
+            font-size: 2rem;
+           }
+           & p {
+            margin: .5rem 0rem;
+           }  
+        }
+        .follow-info {
+            display: flex;
+            align-items: center;
+            padding: .5rem 0rem;
+            gap: 1.6rem;
+            .single {
+                & span {
+                    color: #A78BFA;
+                    font-weight: 900;
+                }
+            }
+        }
+        .visit-link {
+            text-decoration: none;
+            color: #A78BFA;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #A78BFA;
+                transition: width .2s ease-in-out;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+
+// a {
+//     position: relative; // Make the link a positioning context
+//     color: #58a6ff; // Link color
+//     text-decoration: none; // Remove the default underline
+  
+//     &::after {
+//       content: ''; // Pseudo-element for the hover effect
+//       position: absolute;
+//       bottom: 0; // Place it at the bottom of the link text
+//       left: 0; // Start from the left
+//       width: 0; // Initially no width
+//       height: 2px; // Border thickness
+//       background-color: #58a6ff; // Border color
+//       transition: width 0.3s ease-in-out; // Smooth left-to-right animation
+//     }
+  
+//     &:hover::after {
+//       width: 100%; // Expand the border width to full on hover
+//     }
+//   }
+  
