@@ -3,4 +3,24 @@
         font-size: 3.2rem;
         font-weight: bold;
     }
+    @media (max-width: 1024px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        & h3 {
+            font-size: 3.2rem;
+            font-weight: bold;
+        }
+    }
+    @media (max-width: 768px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        & h3 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
 }

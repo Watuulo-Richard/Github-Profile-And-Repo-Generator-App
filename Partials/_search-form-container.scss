@@ -36,4 +36,82 @@
             transform: scale(.98);
         }
     }
+    @media (max-width: 1024px){
+        margin: 1.6rem 0rem;
+        width: 100%;
+        box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+        display: flex;
+        
+        #searchInput {
+            width: 70%;
+            outline: none;
+            font-size: 1.6rem;
+            padding: 1.6rem 0rem;
+            border: $Border-Highlight solid 1px;
+            background: transparent;
+            color: $Text-Primary;
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+            padding-left: 1rem;
+        }
+        .searchBtn {
+            width: 30%;
+            font-size: 1.6rem;
+            border: none;
+            padding: 1.6rem;
+            border: $Border-Highlight solid 1px;
+            background: transparent;
+            color: $Text-Primary;
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            border-left: transparent;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            &:hover {
+                background: $Main-Background;
+            }
+            &:active {
+                transform: scale(.98);
+            }
+        }
+        }
+    @media (max-width: 768px){
+    margin: 1.6rem 0rem;
+    width: 100%;
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+    display: flex;
+    
+    #searchInput {
+        width: 70%;
+        outline: none;
+        font-size: 1.6rem;
+        padding: 1.6rem 0rem;
+        border: $Border-Highlight solid 1px;
+        background: transparent;
+        color: $Text-Primary;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        padding-left: 1rem;
+    }
+    .searchBtn {
+        width: 30%;
+        font-size: 1.6rem;
+        border: none;
+        padding: 1.6rem;
+        border: $Border-Highlight solid 1px;
+        background: transparent;
+        color: $Text-Primary;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        border-left: transparent;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+        &:hover {
+            background: $Main-Background;
+        }
+        &:active {
+            transform: scale(.98);
+        }
+    }
+    }
 }

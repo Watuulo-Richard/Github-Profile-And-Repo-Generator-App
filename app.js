@@ -3,6 +3,20 @@ const searchBtnElement = document.getElementById('searchBtn')
 const githubProfileCardContainer = document.querySelector('.github-profile-card')
 const reposContainer = document.querySelector('.repos')
 
+// setting our spinner and showing it
+const spinner = document.querySelector('.loading')
+const mainContainer = document.querySelector('.container')
+document.addEventListener('DOMContentLoaded', ()=>{
+    spinner.classList.remove('hide')
+    mainContainer.classList.add('hide')
+})
+// Removing our spinner
+window.addEventListener('load', ()=>{
+    setTimeout(()=>{
+        spinner.classList.add('hide')
+        mainContainer.classList.remove('hide')
+    }, 3000)
+})
 async function getUser(user) {
     const response = await fetch(`https://api.github.com/users/${user}`)
     const fetchedUser = await response.json()
@@ -38,9 +52,8 @@ async function displayingUserReposOnUI() {
 searchBtnElement.addEventListener('click', async ()=>{
     const inputValue = searchInputElement.value
     const searchResult = await getUser(inputValue)
-    console.log(searchResult)
     displayingUserReposOnUI()
-    if(!searchResult){
+    if(!searchResult || !searchResult.avatar_url || !searchResult.name || !searchResult.login){
         alert('User Not Found, Please Try To Search Again...')
     }
     else{
