@@ -53,7 +53,7 @@ searchBtnElement.addEventListener('click', async ()=>{
     const inputValue = searchInputElement.value
     const searchResult = await getUser(inputValue)
     displayingUserReposOnUI()
-    if(!searchResult || !searchResult.avatar_url || !searchResult.name || !searchResult.login){
+    if(!searchResult){
         alert('User Not Found, Please Try To Search Again...')
     }
     else{
